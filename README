@@ -1,0 +1,30 @@
+Algoritm:
+
+ Pentru fiecare element in parte:
+ * 	-plec cu raza r = 1;
+ * 	-verific de jur imprejurul elementului astfel:
+ * 		{
+	 * 		data fiind pozitia initiala a elementului [i][j] 
+	 * 		elementele din jur imprejur sunt:
+	 * 		de la (j-r, i-r) pana la (j+r, i-r) pe partea de N
+	 * 		de la (j+r, i-r) pana la (j+r, i+r) pe partea de E
+	 * 		de la (j+r, i+r) pana la (j-r, i+r) pe partea de S
+	 * 		de la (j-r, i+r) pana la (j-r, i-r) pe partea de V
+	 * 		}
+	 * 	
+	 * - verifiv pt fiecare element in parte generat aleator daca e valid;
+	 * - daca e valid si se afla in matrice il adaug la componenta "ColorTable"
+	 * - verific daca am adauga toate culorile in tabela:
+	 * 		- daca le am pe toate: {
+	 * 				scot culoarea din tabela cu indicele cel mai mic;
+	 * 				o pun in noua matrice + trec la urmatorul element din matrice 
+	 * 				}
+	 * 	- daca nu le am pe toare cresc radius;
+
+
+La varianta serial optimizata am renuntat la apeluri de functie cu transfer de parametrii
+Lucrul cu stiva consuma mult timp de computatie;
+Am optimizat de la 2 min 31s la sub 28s in masina virtuala cu 4 core-uri;
+
+Timpii de rulare sunt descrisi in fisierul *.doc;
+

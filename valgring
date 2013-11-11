@@ -1,0 +1,2 @@
+valgrind --tool=memcheck ./serial 10 in10_5 out
+
